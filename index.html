@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Typing Speed Calculator</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+script:wght@500&display=swap" rel="stylesheet">
+        <style>
+            .keyboard {
+                font-family: 'YourCustomFont', sans-serif;
+            }
+            .key:hover{
+                background-color: #6b7280; /*change the color for the hover effect */
+            }
+        </style>
+    </head>
+    <body
+    class="bg-gradient-to-br from-gray-800 to-gray-950 min-h-screen flex justify-center items-center flex-col gap-6">
+        <header>
+            <h4 id="text-showcase" class="p-4 bg-black text-white text-xl rounded-md max-w-5xl border-red-600 border-2 shadow-xl shadow-red-700 font-semibold">click on start Evaluate on yourself</button></button></h4>
+            <div class="flex gap-4 mt-8">
+            <input type="text" id="user-input" class="bg-black grow border-red-660 border-2 shawdow-xl shadow-red-700 rounded-md p-3 text-white">
+            <p id="timer" class="bg-black border-red-600 border-2 shawdow-xl shadow-red-700 rounded-md p-3 text-white w-min">0:00</p>
+            <button id="start-button" class="bg-black border-red-600 border-2 shadow-xl shadow-red-700 rounded-md p-3 text-white hover:scale-105 transition-all hover:shadow-xl hover:shadow-red-900">start<span class="inline"><svg class="inline" xmnls="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M12.75 8a4.5 4.5 0 0 1-8.61 1.834l-1.391.565A6.001 6.001 0 0 0 14.25 8A6 6 0 0 0 3.5 4.334V2.5H2v4l.75.75h3.5v-1.5H4.352A4.5 4.5 0 0 1 12.75 8z" clip-rule="evenodd"/></svg></span></button>
+            </div>
+        </header>
+        <main class="flex flex-col gap-6 bg-black p-4 rounded-xl border-red-700 border-2 shadow-2xl shadow-red-950 hover:translate-y-1">
+            <section class="flex gap-4">
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-192">`</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-49">1</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-50">2</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-51">3</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-52">4</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-53">5</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-54">6</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-55">7</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-56">8</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-57">9</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-48">0</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-189">-</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-187">=</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-8">Backspace</div>
+            </section>
+            <section class="flex gap-4">
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg grow-[2] text-center shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-9">tab</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-81">Q</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-87">W</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-69">E</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-82">R</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-84">T</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-89">Y</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-85">U</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-73">I</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-79">O</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-80">P</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-219">[</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-221">]</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-220">\</div>
+            </section>
+            <section class="flex gap-4">
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg grow-[-1] text-center shadow-md shadow-red-700 hover:translate-y-1 shadow-xl">Caplock</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-65">A</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-83">S</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-68">D</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-70">F</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-71">G</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-72">H</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-74">J</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-75">K</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-76">L</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-186">;</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-">'</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg grow text-center shadow-red-700 hover:translate-y-1 shadow-xl" id="key-13">enter</div>
+            </section>
+            <section class="flex gap-4">
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg grow text-center shadow-md shadow-red-700 hover:translate-y-1 shadow-xl">Shift</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-90">Z</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-88">X</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-67">C</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-86">V</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-66">B</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-78">N</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-77">M</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-188">,</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-190">.</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-191">/</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg grow text-center shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-16">Shift</div>
+            </section>
+            <section class="flex gap-4">
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-17">ctrl</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-255">fn</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-91">⊞ Win</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-18">alt</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg grow-[1] text-center shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-32">space</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-18">alt</div>
+                <div class="bg-gray-950 border-2 border-red-600 text-white px-6 py-3 rounded-lg shadow-md shadow-red-700 hover:translate-y-1 shadow-xl" id="key-17">ctrl</div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+        </script>
+</body>
+</html>
